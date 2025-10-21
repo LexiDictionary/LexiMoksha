@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LexiMoksha — English—Moksha Dictionary</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dictionary-wrapper">
+    <header class="dictionary-header">
+      <div class="header-content">
+        <h1>LexiMoksha</h1>
+        <p class="tagline">English ↔ Moksha learner's dictionary</p>
+      </div>
+    </header>
+
+    <div class="control-bar">
+      <div class="direction-toggle">
+        <button class="direction-btn active" data-direction="en-mdf">English → Moksha</button>
+        <button class="direction-btn" data-direction="mdf-en">Moksha → English</button>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-input" id="searchInput" placeholder="Enter a word…" autocomplete="off">
+        <div class="button-group">
+          <button class="random-btn" id="randomBtn">🎲 Random Word</button>
+          <button class="exercise-btn" id="exerciseBtn">📝 Test Yourself</button>
+        </div>
+
+        <div class="keyboard-toggle-container">
+          <button class="keyboard-toggle-btn" id="keyboardToggleBtn">⌨️ Show Keyboard</button>
+        </div>
+
+        <div class="virtual-keyboard" id="virtualKeyboard" style="display: none;">
+          <div class="keyboard-content">
+            <div class="keyboard-row">
+              <button class="key">q</button>
+              <button class="key">w</button>
+              <button class="key">e</button>
+              <button class="key">r</button>
+              <button class="key">t</button>
+              <button class="key">y</button>
+              <button class="key">u</button>
+              <button class="key">i</button>
+              <button class="key">o</button>
+              <button class="key">p</button>
+              <button class="key">ä</button>
+            </div>
+            <div class="keyboard-row">
+              <button class="key">a</button>
+              <button class="key">s</button>
+              <button class="key">d</button>
+              <button class="key">f</button>
+              <button class="key">g</button>
+              <button class="key">h</button>
+              <button class="key">j</button>
+              <button class="key">k</button>
+              <button class="key">l</button>
+              <button class="key">ń</button>
+              <button class="key">ź</button>
+            </div>
+            <div class="keyboard-row">
+              <button class="key">z</button>
+              <button class="key">x</button>
+              <button class="key">c</button>
+              <button class="key">v</button>
+              <button class="key">b</button>
+              <button class="key">n</button>
+              <button class="key">m</button>
+              <button class="key">č</button>
+              <button class="key">š</button>
+              <button class="key">ž</button>
+            </div>
+            <div class="keyboard-row">
+              <button class="key wide" data-action="space">␣</button>
+              <button class="key" data-action="backspace">⌫</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="results-container" id="resultsContainer">
+      <div class="about-section" id="aboutSection">
+        <div class="section-title">About</div>
+        <p class="about-content">bla blabla bla</p>
+      </div>
+    </main>
+
+    <div class="filter-modal" id="filterModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle">Nouns</h3>
+          <button class="close-modal" id="closeModal">×</button>
+        </div>
+        <div class="modal-body" id="modalBody">
+        </div>
+      </div>
+    </div>
+
+    <div class="exercise-modal" id="exerciseModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Vocabulary Exercise</h3>
+          <button class="close-modal" id="closeExerciseModal">×</button>
+        </div>
+        <div class="modal-body" id="exerciseModalBody">
+        </div>
+      </div>
+    </div>
+
+    <footer class="dictionary-footer">
+      <p>© 2025 LexiMoksha Dictionary — Created by <a href="https://www.linkedin.com/in/mikko-fidias-phd-362379237/" target="_blank" class="university-link">Mikko</a> — 
+        <a href="https://pnzgu.ru/" target="_blank" class="university-link">Penza State University</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
