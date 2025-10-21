@@ -1,8 +1,8 @@
-/* LexiMoksha — Moksha color palette: pink, light gray, black */
+/* LexiMoksha — Moksha color palette: pink, black, light gray */
 :root {
   --brand-primary: #F2529D;    /* Vibrant pink */
+  --brand-secondary: #000000;  /* Black */
   --brand-light: #F2F2F2;      /* Light gray */
-  --brand-dark: #000000;       /* Black */
   --brand-bg: #FFFFFF;
   --text-primary: #1a1a1a;
   --text-secondary: #4a4a4a;
@@ -139,7 +139,7 @@ body {
 }
 
 .exercise-btn {
-  background: var(--brand-dark);
+  background: var(--brand-secondary);
   color: white;
 }
 
@@ -214,7 +214,7 @@ body {
 }
 
 .key:hover {
-  background: #e6e6e6;
+  background: #f0f0f0;
   transform: translateY(-1px);
 }
 
@@ -254,6 +254,11 @@ body {
   letter-spacing: -0.3px;
 }
 
+.headword.moksha {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.9rem;
+}
+
 .pronunciation {
   font-family: 'Inter', sans-serif;
   color: var(--brand-primary);
@@ -284,6 +289,10 @@ body {
   background-color: rgba(242, 82, 157, 0.04);
 }
 
+.translation.moksha {
+  font-family: 'Inter', sans-serif;
+}
+
 .pos, .topic-tag, .level-tag {
   background: var(--brand-primary);
   color: white;
@@ -300,11 +309,14 @@ body {
 }
 
 .topic-tag {
-  background: var(--brand-dark);
+  background: var(--brand-secondary);
+  color: white;
 }
 
 .level-tag {
-  background: var(--brand-primary);
+  background: var(--brand-light);
+  color: var(--brand-secondary);
+  border: 1px solid var(--brand-secondary);
 }
 
 .pos:hover, .topic-tag:hover, .level-tag:hover {
@@ -508,7 +520,7 @@ body {
 }
 
 .filter-word-item:hover {
-  color: var(--brand-dark);
+  color: var(--brand-secondary);
   text-decoration: underline;
 }
 
@@ -620,7 +632,8 @@ body {
 }
 
 .next-btn:hover {
-  background: var(--brand-dark);
+  background: var(--brand-secondary);
+  color: white;
 }
 
 .close-btn {
@@ -645,7 +658,7 @@ body {
 }
 
 .goto-lemma-btn:hover {
-  background: var(--brand-dark);
+  background: var(--brand-secondary);
   transform: translateY(-1px);
 }
 
