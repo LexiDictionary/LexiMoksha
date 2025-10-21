@@ -1,5 +1,5 @@
 function isMoksha(text) {
-  return /[a-zäńźčšž]/i.test(text);
+  return /[\u0400-\u04FF]/.test(text);
 }
 
 const dictionary = {
@@ -15,11 +15,11 @@ const dictionary = {
           definition: "clear liquid essential for life",
           translation: "ведь",
           examples: [
-            { en: "Drink clean water.", mdf: "Пий саф ведень." },
-            { en: "The well has fresh water.", mdf: "Колодець вань ведень." }
+            { en: "Drink clean water.", mdf: "Пийте чистай ведень." },
+            { en: "The well has fresh water.", mdf: "Колодець ведень пуло." }
           ],
           derivatives: [
-            { word: "water bottle", translation: "ведень пуцкав" }
+            { word: "water bottle", translation: "ведень пуло" }
           ],
           grammar: { plural: "water" }
         }
@@ -34,18 +34,18 @@ const dictionary = {
         {
           pos: "verb",
           definition: "move from one place to another",
-          translation: "чирь",
+          translation: "пийнемс",
           examples: [
-            { en: "I go to school.", mdf: "Мон чирь школась." },
-            { en: "He went to the market.", mdf: "Ине чирь базарс." }
+            { en: "I go to school.", mdf: "Мон школась пийнемс." },
+            { en: "He went to the market.", mdf: "Ине базарось пийнезь." }
           ],
           derivatives: [
-            { word: "goer", translation: "чирьгак" }
+            { word: "goer", translation: "пийнемсель" }
           ],
           grammar: {
-            past: "чирь",
-            present: "чирьнем/чирьнеть/чирьне",
-            future: "чирьнезе"
+            past: "пийнезь",
+            present: "пийнемс",
+            future: "пийнеть"
           }
         }
       ]
@@ -58,15 +58,15 @@ const dictionary = {
         {
           pos: "adjective",
           definition: "of high quality or desirable",
-          translation: "мейле",
+          translation: "чилисема",
           examples: [
-            { en: "This is good food.", mdf: "Тензэ мейле аш." },
-            { en: "She is a good person.", mdf: "Тензэ мейле ломань." }
+            { en: "This is good food.", mdf: "Теня чилисема кедьсэ." },
+            { en: "She is a good person.", mdf: "Теня чилисема эряви." }
           ],
           derivatives: [
-            { word: "goodness", translation: "мейлесь" }
+            { word: "goodness", translation: "чилисемасть" }
           ],
-          grammar: { comparative: "мейлев", superlative: "мейлевань" }
+          grammar: { comparative: "чилисемарак", superlative: "чилисемаркс" }
         }
       ]
     },
@@ -78,10 +78,10 @@ const dictionary = {
         {
           pos: "fixed expression",
           definition: "expression of gratitude",
-          translation: "спасибо",
+          translation: "баянень",
           examples: [
-            { en: "Thank you for your help.", mdf: "Спасибо тонь помочьсэ." },
-            { en: "Say thank you!", mdf: "Арь спасибо!" }
+            { en: "Thank you for your help.", mdf: "Баянень тонь ломаткс." },
+            { en: "Say thank you!", mdf: "Баянень кай!" }
           ],
           derivatives: [],
           grammar: {}
@@ -97,15 +97,15 @@ const dictionary = {
         {
           pos: "noun",
           definition: "building for living",
-          translation: "куда",
+          translation: "куду",
           examples: [
-            { en: "My house is big.", mdf: "Монь кудам покш." },
-            { en: "They built a new house.", mdf: "Тензэ вань кудась." }
+            { en: "My house is big.", mdf: "Монь кудома вейке." },
+            { en: "They built a new house.", mdf: "Ине вейкекс кудо вийнезь." }
           ],
           derivatives: [
-            { word: "household", translation: "кудомастор" }
+            { word: "household", translation: "кудулга" }
           ],
-          grammar: { plural: "кудат" }
+          grammar: { plural: "кудот" }
         }
       ]
     },
@@ -118,18 +118,18 @@ const dictionary = {
         {
           pos: "verb",
           definition: "consume food",
-          translation: "аш",
+          translation: "пийдемс",
           examples: [
-            { en: "We eat rice.", mdf: "Мы аш рис." },
-            { en: "He ate bread.", mdf: "Ине аш лембе." }
+            { en: "We eat rice.", mdf: "Ми рис пийдемс." },
+            { en: "He ate bread.", mdf: "Ине лемезь лов." }
           ],
           derivatives: [
-            { word: "eater", translation: "ашгак" }
+            { word: "eater", translation: "пийдемсель" }
           ],
           grammar: {
-            past: "аш",
-            present: "ашнем/ашнеть/ашне",
-            future: "ашнезе"
+            past: "пийдезь",
+            present: "пийдемс",
+            future: "пийдеть"
           }
         }
       ]
@@ -142,15 +142,15 @@ const dictionary = {
         {
           pos: "adjective",
           definition: "of considerable size",
-          translation: "покш",
+          translation: "вейке",
           examples: [
-            { en: "A big tree.", mdf: "Покш мода." },
-            { en: "The city is big.", mdf: "Город покш." }
+            { en: "A big tree.", mdf: "Вейке мода." },
+            { en: "The city is big.", mdf: "Город вейке." }
           ],
           derivatives: [
-            { word: "bigness", translation: "покшесь" }
+            { word: "bigness", translation: "вейкесь" }
           ],
-          grammar: { comparative: "покшев", superlative: "покшевань" }
+          grammar: { comparative: "вейкерак", superlative: "вейкеркс" }
         }
       ]
     },
@@ -162,10 +162,10 @@ const dictionary = {
         {
           pos: "fixed expression",
           definition: "greeting",
-          translation: "салют",
+          translation: "урожамс",
           examples: [
-            { en: "Hello, how are you?", mdf: "Салют, морь тонь?" },
-            { en: "Say hello to her.", mdf: "Арь салют тензэ." }
+            { en: "Hello, how are you?", mdf: "Урожамс, морамс?" },
+            { en: "Say hello to her.", mdf: "Теня урожамс кай!" }
           ],
           derivatives: [],
           grammar: {}
@@ -183,8 +183,8 @@ const dictionary = {
           definition: "collection of written pages",
           translation: "книга",
           examples: [
-            { en: "Read this book.", mdf: "Лия тензэ книга." },
-            { en: "I have many books.", mdf: "Монь мейле книгат." }
+            { en: "Read this book.", mdf: "Теня книга читамс." },
+            { en: "I have many books.", mdf: "Мон много книгат." }
           ],
           derivatives: [
             { word: "notebook", translation: "тетрадь" }
@@ -202,27 +202,27 @@ const dictionary = {
           pos: "noun",
           topic: "nature",
           definition: "burning material that produces heat and light",
-          translation: "тури",
+          translation: "полы",
           examples: [
-            { en: "Be careful with the fire.", mdf: "Турись эряв арь." },
-            { en: "The fire is warm.", mdf: "Тури савсь." }
+            { en: "Be careful with the fire.", mdf: "Полынь варчамс." },
+            { en: "The fire is warm.", mdf: "Полынь сюро." }
           ],
           derivatives: [
-            { word: "campfire", translation: "лагерь турись" }
+            { word: "campfire", translation: "лагерь полы" }
           ],
-          grammar: { plural: "турьт" }
+          grammar: { plural: "полыт" }
         },
         {
           pos: "verb",
           topic: "employment",
           definition: "dismiss someone from a job",
-          translation: "лайть",
+          translation: "работась лисемс",
           examples: [
-            { en: "They fired him for being late.", mdf: "Тензэ лайть кезэрень." },
-            { en: "She was fired last week.", mdf: "Тензэ лайть проштынь кизонь." }
+            { en: "They fired him for being late.", mdf: "Ине лемезь работась лисезь." },
+            { en: "She was fired last week.", mdf: "Теня проштынь неделясь работась лисезь." }
           ],
           derivatives: [
-            { word: "firing", translation: "лайтнема" }
+            { word: "firing", translation: "работась лисемасть" }
           ],
           grammar: {
             past: "fired",
@@ -240,7 +240,7 @@ const dictionary = {
       pronunciation: "/vedʲ/",
       topic: "nature",
       cefr: "A1",
-      forms: ["ведь", "ведень", "ведьт"],
+      forms: ["ведь", "ведень", "ведет"],
       senses: [
         {
           pos: "noun",
@@ -248,43 +248,44 @@ const dictionary = {
           translation: "water",
           examples: [
             { en: "Water is life.", mdf: "Ведь — эрьва." },
-            { en: "Give me water.", mdf: "Арь монь ведень." }
+            { en: "Give me water.", mdf: "Монь ведень анай." }
           ],
           derivatives: [
-            { word: "ведень пуцкав", translation: "water bottle" }
+            { word: "ведень пуло", translation: "water bottle" }
           ],
-          grammar: { genitive: "ведень", plural: "ведьт" }
+          grammar: { genitive: "ведень", plural: "ведет" }
         }
       ]
     },
-    "чирь": {
-      canonical: "чирь",
-      pronunciation: "/tʃirʲ/",
+    "пийнемс": {
+      canonical: "пийнемс",
+      pronunciation: "/pijnʲems/",
       topic: "action",
       cefr: "A1",
-      forms: ["чирь", "чирьнем", "чирьнезе"],
+      forms: ["пийнемс", "пийнезь", "пийнеть"],
       senses: [
         {
           pos: "verb",
           definition: "move from one place to another",
           translation: "go",
           examples: [
-            { en: "Go home!", mdf: "Чирь кудась!" },
-            { en: "I will go tomorrow.", mdf: "Мон чирьнезе ирень." }
+            { en: "Go home!", mdf: "Кудось пийнемс!" },
+            { en: "I will go tomorrow.", mdf: "Мон завран пийнеть." }
           ],
           derivatives: [
-            { word: "чирьгак", translation: "goer" }
+            { word: "пийнемсель", translation: "goer" }
           ],
           grammar: {
-            firstPerson: "чирьнем",
-            future: "чирьнезе"
+            present: "пийнемс",
+            past: "пийнезь",
+            future: "пийнеть"
           }
         }
       ]
     },
-    "мейле": {
-      canonical: "мейле",
-      pronunciation: "/mejle/",
+    "чилисема": {
+      canonical: "чилисема",
+      pronunciation: "/tʃilisema/",
       topic: "evaluation",
       cefr: "A1",
       senses: [
@@ -293,19 +294,19 @@ const dictionary = {
           definition: "of high quality or desirable",
           translation: "good",
           examples: [
-            { en: "Good morning!", mdf: "Мейле иресь!" },
-            { en: "This is good.", mdf: "Тензэ мейле." }
+            { en: "Good morning!", mdf: "Чилисема утсо!" },
+            { en: "This is good.", mdf: "Теня чилисема." }
           ],
           derivatives: [
-            { word: "мейлесь", translation: "goodness" }
+            { word: "чилисемасть", translation: "goodness" }
           ],
-          grammar: { comparative: "мейлев", superlative: "мейлевань" }
+          grammar: { comparative: "чилисемарак", superlative: "чилисемаркс" }
         }
       ]
     },
-    "спасибо": {
-      canonical: "спасибо",
-      pronunciation: "/spasibo/",
+    "баянень": {
+      canonical: "баянень",
+      pronunciation: "/bajanenʲ/",
       topic: "social",
       cefr: "A1",
       senses: [
@@ -314,64 +315,65 @@ const dictionary = {
           definition: "expression of gratitude",
           translation: "thank you",
           examples: [
-            { en: "Thank you very much.", mdf: "Мейле спасибо." },
-            { en: "You're welcome.", mdf: "Аф улемасть." }
+            { en: "Thank you very much.", mdf: "Баянень мезе." },
+            { en: "You're welcome.", mdf: "Савамс." }
           ],
           derivatives: [],
           grammar: {}
         }
       ]
     },
-    "куда": {
-      canonical: "куда",
-      pronunciation: "/kuda/",
+    "куду": {
+      canonical: "куду",
+      pronunciation: "/kudu/",
       topic: "housing",
       cefr: "A1",
-      forms: ["куда", "кудась", "кудат"],
+      forms: ["куду", "кудось", "кудот"],
       senses: [
         {
           pos: "noun",
           definition: "building for living",
           translation: "house",
           examples: [
-            { en: "My house is here.", mdf: "Монь кудам тензэ." },
-            { en: "Build a house.", mdf: "Куда карма." }
+            { en: "My house is here.", mdf: "Монь кудом ине." },
+            { en: "Build a house.", mdf: "Кудо вийнемс." }
           ],
           derivatives: [
-            { word: "кудомастор", translation: "household" }
+            { word: "кудулга", translation: "household" }
           ],
-          grammar: { inessive: "кудась", plural: "кудат" }
+          grammar: { inessive: "кудось", plural: "кудот" }
         }
       ]
     },
-    "аш": {
-      canonical: "аш",
-      pronunciation: "/aʃ/",
+    "пийдемс": {
+      canonical: "пийдемс",
+      pronunciation: "/pijdemʲs/",
       topic: "food",
       cefr: "A1",
-      forms: ["аш", "ашнем", "ашнезе"],
+      forms: ["пийдемс", "пийдезь", "пийдеть"],
       senses: [
         {
           pos: "verb",
           definition: "consume food",
           translation: "eat",
           examples: [
-            { en: "Eat your food.", mdf: "Аш тонь аш." },
-            { en: "I ate bread.", mdf: "Мон аш лембе." }
+            { en: "Eat your food.", mdf: "Тонь кедьсэ пийдемс." },
+            { en: "I ate bread.", mdf: "Мон лов пийдезь." }
           ],
           derivatives: [
-            { word: "ашгак", translation: "eater" }
+            { word: "пийдемсель", translation: "eater" }
           ],
           grammar: {
-            firstPerson: "ашнем",
-            future: "ашнезе"
+            present: "пийдемс",
+            past: "пийдезь",
+            future: "пийдеть"
           }
         }
       ]
     },
-    "покш": {
-      canonical: "покш",
-      pronunciation: "/pokʃ/",
+    "вейке": {
+      canonical: "вейке",
+      pronunciation: "/vejke/",
       topic: "size",
       cefr: "A1",
       senses: [
@@ -380,19 +382,19 @@ const dictionary = {
           definition: "of considerable size",
           translation: "big",
           examples: [
-            { en: "Big mountain.", mdf: "Покш гора." },
-            { en: "She is big.", mdf: "Тензэ покш." }
+            { en: "Big mountain.", mdf: "Вейке лей." },
+            { en: "She is big.", mdf: "Теня вейке." }
           ],
           derivatives: [
-            { word: "покшесь", translation: "bigness" }
+            { word: "вейкесь", translation: "bigness" }
           ],
-          grammar: { comparative: "покшев", superlative: "покшевань" }
+          grammar: { comparative: "вейкерак", superlative: "вейкеркс" }
         }
       ]
     },
-    "салют": {
-      canonical: "салют",
-      pronunciation: "/salʲut/",
+    "урожамс": {
+      canonical: "урожамс",
+      pronunciation: "/uroʒams/",
       topic: "social",
       cefr: "A1",
       senses: [
@@ -401,8 +403,8 @@ const dictionary = {
           definition: "greeting",
           translation: "hello",
           examples: [
-            { en: "Hello, friend!", mdf: "Салют, прят!" },
-            { en: "Say hello.", mdf: "Арь салют." }
+            { en: "Hello, friend!", mdf: "Урожамс, ялгамс!" },
+            { en: "Say hello.", mdf: "Урожамс кай." }
           ],
           derivatives: [],
           grammar: {}
@@ -411,7 +413,7 @@ const dictionary = {
     },
     "книга": {
       canonical: "книга",
-      pronunciation: "/kniga/",
+      pronunciation: "/knʲiga/",
       topic: "education",
       cefr: "A1",
       forms: ["книга", "книгась", "книгат"],
@@ -421,35 +423,35 @@ const dictionary = {
           definition: "collection of written pages",
           translation: "book",
           examples: [
-            { en: "This book is interesting.", mdf: "Тензэ книга мейле." },
-            { en: "I read a book.", mdf: "Мон лия книга." }
+            { en: "This book is interesting.", mdf: "Теня книга интересной." },
+            { en: "I read a book.", mdf: "Мон книга читазь." }
           ],
           derivatives: [
             { word: "тетрадь", translation: "notebook" }
           ],
-          grammar: { inessive: "книгась", plural: "книгат" }
+          grammar: { adessive: "книгась", plural: "книгат" }
         }
       ]
     },
-    "тури": {
-      canonical: "тури",
-      pronunciation: "/turi/",
+    "полы": {
+      canonical: "полы",
+      pronunciation: "/polɨ/",
       topic: "nature",
       cefr: "A2",
-      forms: ["тури", "турись", "турьт"],
+      forms: ["полы", "полынь", "полыт"],
       senses: [
         {
           pos: "noun",
           definition: "burning material that produces heat and light",
           translation: "fire",
           examples: [
-            { en: "The fire is out.", mdf: "Тури савсь." },
-            { en: "Make a fire.", mdf: "Тури карма." }
+            { en: "The fire is out.", mdf: "Полынь сюро." },
+            { en: "Make a fire.", mdf: "Полы вийнемс." }
           ],
           derivatives: [
-            { word: "лагерь турись", translation: "campfire" }
+            { word: "лагерь полы", translation: "campfire" }
           ],
-          grammar: { inessive: "турись", plural: "турьт" }
+          grammar: { genitive: "полынь", plural: "полыт" }
         }
         // ✅ Only noun sense in Moksha
       ]
@@ -517,6 +519,7 @@ function searchExamples(query, direction) {
 
 // Rendering
 function renderEntry(lemma, entry, direction) {
+  const isHeadwordMoksha = isMoksha(entry.canonical);
   let sensesHtml = '';
 
   if (entry.senses && entry.senses.length > 1) {
@@ -548,15 +551,16 @@ function renderEntry(lemma, entry, direction) {
       let derivativesHtml = sense.derivatives.map(derivative => {
         const hasEntry = hasLemma(derivative.word, direction);
         const wordClass = hasEntry ? 'derivative-word linkable' : 'derivative-word';
+        const translationClass = isMoksha(derivative.translation) ? 'moksha' : '';
         return `
           <div class="derivative-item">
             <span class="${wordClass}" ${hasEntry ? `data-word="${derivative.word}"` : ''}>${escapeHtml(derivative.word)}</span>
-            <div class="derivative-translation">${escapeHtml(derivative.translation)}</div>
+            <div class="derivative-translation ${translationClass}">${escapeHtml(derivative.translation)}</div>
           </div>
         `;
       }).join('');
 
-      const translationClass = '';
+      const translationClass = isMoksha(senseData.translation) ? 'moksha' : '';
 
       const sensePos = senseData.pos || entry.pos;
       const senseTopic = senseData.topic || entry.topic;
@@ -616,15 +620,16 @@ function renderEntry(lemma, entry, direction) {
     let derivativesHtml = senseData.derivatives.map(derivative => {
       const hasEntry = hasLemma(derivative.word, direction);
       const wordClass = hasEntry ? 'derivative-word linkable' : 'derivative-word';
+      const translationClass = isMoksha(derivative.translation) ? 'moksha' : '';
       return `
         <div class="derivative-item">
           <span class="${wordClass}" ${hasEntry ? `data-word="${derivative.word}"` : ''}>${escapeHtml(derivative.word)}</span>
-          <div class="derivative-translation">${escapeHtml(derivative.translation)}</div>
+          <div class="derivative-translation ${translationClass}">${escapeHtml(derivative.translation)}</div>
         </div>
       `;
     }).join('');
 
-    const translationClass = '';
+    const translationClass = isMoksha(senseData.translation) ? 'moksha' : '';
 
     const sensePos = senseData.pos || entry.pos;
     const senseTopic = senseData.topic || entry.topic;
@@ -664,7 +669,7 @@ function renderEntry(lemma, entry, direction) {
   return `
     <div class="entry" style="position:relative;">
       ${cefrHtml}
-      <div class="headword">${escapeHtml(entry.canonical)}</div>
+      <div class="headword ${isHeadwordMoksha ? 'moksha' : ''}">${escapeHtml(entry.canonical)}</div>
       <div class="pronunciation">${escapeHtml(entry.pronunciation)}</div>
       ${sensesHtml}
     </div>
