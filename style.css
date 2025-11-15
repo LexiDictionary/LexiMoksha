@@ -1,8 +1,7 @@
-/* LexiMoksha — Moksha color palette: pink, black, light gray */
 :root {
-  --brand-primary: #F2529D;    /* Vibrant pink */
-  --brand-secondary: #000000;  /* Black */
-  --brand-light: #F2F2F2;      /* Light gray */
+  --brand-primary: #F2529D;
+  --brand-secondary: #000000;
+  --brand-light: #F2F2F2;
   --brand-bg: #FFFFFF;
   --text-primary: #1a1a1a;
   --text-secondary: #4a4a4a;
